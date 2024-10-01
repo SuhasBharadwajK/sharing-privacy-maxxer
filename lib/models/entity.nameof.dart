@@ -15,7 +15,8 @@ abstract class NameofEntity {
   static const String fieldId = 'id';
 
   static const String propertyGetEntityName = 'entityName';
-  static const String propertyGetCreateQuery = 'createQuery';
+  static const String propertyGetColumnDefs = 'columnDefs';
+  static const String propertyGetColumns = 'columns';
 
   static const String functionToJsonMap = 'toJsonMap';
   static const String functionToJsonString = 'toJsonString';

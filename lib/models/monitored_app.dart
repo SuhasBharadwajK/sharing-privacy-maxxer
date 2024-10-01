@@ -12,18 +12,18 @@ part 'monitored_app.nameof.dart';
 class MonitoredApp extends Entity {
   String name;
   String iconName;
-  String querySegment;
+  List<String> querySegments;
   bool isEnabled;
 
   MonitoredApp(
     super.id,
     this.name,
     this.iconName,
-    this.querySegment,
+    this.querySegments,
     this.isEnabled,
   );
 
-  MonitoredApp.empty() : this(0, "", "", "", true);
+  MonitoredApp.empty() : this(0, "", "", [], true);
 
   factory MonitoredApp.fromJson(Map<String, dynamic> json) =>
       _$MonitoredAppFromJson(json);
@@ -43,8 +43,8 @@ class MonitoredApp extends Entity {
   String get entityName => NameofMonitoredApp.className;
 
   @override
-  String get columnDefs => "${super.columnDefs}, ${NameofMonitoredApp.fieldName} TEXT, ${NameofMonitoredApp.fieldIconName} TEXT, ${NameofMonitoredApp.fieldQuerySegment} TEXT, ${NameofMonitoredApp.fieldIsEnabled} INTEGER";
+  String get columnDefs => "${super.columnDefs}, ${NameofMonitoredApp.fieldName} TEXT, ${NameofMonitoredApp.fieldIconName} TEXT, ${NameofMonitoredApp.fieldQuerySegments} TEXT, ${NameofMonitoredApp.fieldIsEnabled} INTEGER";
 
   @override
-  List<String> get columns => [NameofMonitoredApp.fieldName, NameofMonitoredApp.fieldIconName, NameofMonitoredApp.fieldQuerySegment, NameofMonitoredApp.fieldIsEnabled];
+  List<String> get columns => [NameofMonitoredApp.fieldName, NameofMonitoredApp.fieldIconName, NameofMonitoredApp.fieldQuerySegments, NameofMonitoredApp.fieldIsEnabled];
 }

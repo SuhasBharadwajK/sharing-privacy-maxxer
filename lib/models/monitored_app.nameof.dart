@@ -11,14 +11,17 @@ abstract class NameofMonitoredApp {
   static const String className = 'MonitoredApp';
 
   static const String constructor = '';
+  static const String constructorEmpty = 'empty';
   static const String constructorFromJson = 'fromJson';
 
   static const String fieldName = 'name';
   static const String fieldIconName = 'iconName';
-  static const String fieldQuerySegment = 'querySegment';
+  static const String fieldQuerySegments = 'querySegments';
   static const String fieldIsEnabled = 'isEnabled';
 
   static const String propertyGetEntityName = 'entityName';
+  static const String propertyGetColumnDefs = 'columnDefs';
+  static const String propertyGetColumns = 'columns';
 
   static const String functionToJson = 'toJson';
   static const String functionToJsonMap = 'toJsonMap';

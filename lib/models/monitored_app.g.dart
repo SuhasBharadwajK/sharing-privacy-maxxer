@@ -10,7 +10,7 @@ MonitoredApp _$MonitoredAppFromJson(Map<String, dynamic> json) => MonitoredApp(
       (json['id'] as num).toInt(),
       json['name'] as String,
       json['iconName'] as String,
-      json['querySegment'] as String,
+      (json['querySegments'] as List<dynamic>).map((e) => e as String).toList(),
       json['isEnabled'] as bool,
     );
 
@@ -19,6 +19,6 @@ Map<String, dynamic> _$MonitoredAppToJson(MonitoredApp instance) =>
       'id': instance.id,
       'name': instance.name,
       'iconName': instance.iconName,
-      'querySegment': instance.querySegment,
+      'querySegments': instance.querySegments,
       'isEnabled': instance.isEnabled,
     };

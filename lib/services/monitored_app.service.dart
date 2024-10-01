@@ -36,8 +36,8 @@ class MonitoredAppService extends Disposable {
   }
 
   Future<MonitoredApp> createMonitoredApp(
-      String name, String iconName, String querySegment) async {
-    final app = MonitoredApp(0, name, iconName, querySegment, true);
+      String name, String iconName, List<String> querySegments) async {
+    final app = MonitoredApp(0, name, iconName, querySegments, true);
     _dataService = DataService(app.entityName, app.columnDefs);
 
     // Save app to storage.
