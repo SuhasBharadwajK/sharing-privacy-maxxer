@@ -7,6 +7,7 @@ environment:
   sdk: ^3.5.3
 
 dependencies:
+  cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
   flutter_secure_storage: ^9.2.2
@@ -14,6 +15,7 @@ dependencies:
   json_annotation: ^4.9.0
   nameof_annotation: ^0.2.1
   path: ^1.9.0
+  receive_sharing_intent: ^1.8.0
   sqflite: ^2.3.3+2
   uuid: ^4.5.1
 

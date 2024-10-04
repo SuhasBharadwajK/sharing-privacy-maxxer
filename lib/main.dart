@@ -12,8 +12,10 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: AppList(),
+        body: SafeArea(
+          child: Center(
+            child: AppList(),
+          ),
         ),
       ),
     );
